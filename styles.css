@@ -1,0 +1,53 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://image.api.playstation.com/vulcan/ap/rnd/202010/2821/zZKW3LsagvGWaFlVfOR0ZWbc.jpg);
+  background-size: cover;
+}
+
+.Cards {
+  text-align: center;
+  background-color: rgb(238, 167, 179);
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  font-size: 80px;
+  padding-top: 99px;
+  border-radius: 10px;
+  box-shadow: -12px 5px rgb(230, 14, 132);
+  position: relative;
+  &:before {
+    position: absolute;
+    top: 0px;
+    left: 12px;
+    font-size: 65px;
+  }
+  &::after {
+    position: absolute;
+    bottom: 0px;
+    right: 12px;
+    font-size: 65px;
+    transform: rotate(180deg);
+  }
+
+  &.heart:before,
+  &.heart:after {
+    content: "\2665";
+    color: red;
+  }
+  &.spade:before,
+  &.spade:after {
+    content: "\2660";
+  }
+  &.club:before,
+  &.club:after {
+    content: "\2663";
+  }
+  &.diamond:before,
+  &.diamond:after {
+    content: "\2666";
+    color: red;
+  }
+}
